@@ -7,7 +7,7 @@ info:
   license:
     name: MPL-2.0
   title: Kanidm
-  version: 1.10.4
+  version: 1.10.5
 externalDocs:
   description: Kanidm documentation page
   url: https://kanidm.com/docs
@@ -592,6 +592,7 @@ paths:
                   minimum: 0
                   type: integer
                 type: array
+                default: null
           description: Ok
         "401":
           description: Authorization required
@@ -678,6 +679,7 @@ paths:
                 items:
                   type: string
                 type: array
+                default: null
           description: ""
         "400":
           description: Invalid Request
@@ -991,6 +993,7 @@ paths:
             schema:
               items: {}
               type: array
+              default: null
         required: true
       responses:
         "200":
@@ -1034,6 +1037,7 @@ paths:
                 items:
                   $ref: "#/components/schemas/Entry"
                 type: array
+                default: null
           description: ""
         "400":
           description: Invalid Request
@@ -1064,6 +1068,7 @@ paths:
                 type: string
               nullable: true
               type: array
+              default: null
       responses:
         "200":
           content:
@@ -1098,6 +1103,7 @@ paths:
                   type: string
                 nullable: true
                 type: array
+                default: null
           description: ""
         "400":
           description: Invalid Request
@@ -1126,6 +1132,7 @@ paths:
               items:
                 type: string
               type: array
+              default: null
         required: true
       responses:
         "200":
@@ -1193,6 +1200,7 @@ paths:
                 items:
                   $ref: "#/components/schemas/Entry"
                 type: array
+                default: null
           description: ""
         "400":
           description: Invalid Request
@@ -1211,9 +1219,7 @@ paths:
         content:
           application/json:
             schema:
-              allOf:
-              - $ref: "#/components/schemas/Entry"
-              nullable: true
+              $ref: "#/components/schemas/Entry"
         required: true
       responses:
         "200":
@@ -1372,6 +1378,7 @@ paths:
                 type: string
               nullable: true
               type: array
+              default: null
       responses:
         "200":
           content:
@@ -1412,6 +1419,7 @@ paths:
                 items:
                   type: string
                 type: array
+                default: null
           description: ""
         "400":
           description: Invalid Request
@@ -1447,6 +1455,7 @@ paths:
               items:
                 type: string
               type: array
+              default: null
         required: true
       responses:
         "200":
@@ -1487,6 +1496,7 @@ paths:
               items:
                 type: string
               type: array
+              default: null
         required: true
       responses:
         "200":
@@ -1620,6 +1630,7 @@ paths:
                 items:
                   $ref: "#/components/schemas/Entry"
                 type: array
+                default: null
           description: ""
         "400":
           description: Invalid Request
@@ -1916,6 +1927,7 @@ paths:
               items:
                 type: string
               type: array
+              default: null
         required: true
       responses:
         "200":
@@ -2046,6 +2058,7 @@ paths:
               items:
                 type: string
               type: array
+              default: null
         required: true
       responses:
         "200":
@@ -2120,6 +2133,7 @@ paths:
               items:
                 type: string
               type: array
+              default: null
         required: true
       responses:
         "200":
@@ -2148,6 +2162,7 @@ paths:
                 items:
                   $ref: "#/components/schemas/Entry"
                 type: array
+                default: null
           description: ""
         "400":
           description: Invalid Request
@@ -2359,6 +2374,7 @@ paths:
                   type: string
                 nullable: true
                 type: array
+                default: null
           description: ""
         "400":
           description: Invalid Request
@@ -2394,6 +2410,7 @@ paths:
               items:
                 type: string
               type: array
+              default: null
         required: true
       responses:
         "200":
@@ -2434,6 +2451,7 @@ paths:
               items:
                 type: string
               type: array
+              default: null
         required: true
       responses:
         "200":
@@ -2807,6 +2825,7 @@ paths:
                 items:
                   type: string
                 type: array
+                default: null
           description: ""
         "400":
           description: Invalid Request
@@ -2834,6 +2853,7 @@ paths:
             schema:
               items: {}
               type: array
+              default: null
         required: true
       responses:
         "200":
@@ -3152,6 +3172,7 @@ paths:
                 items:
                   $ref: "#/components/schemas/Entry"
                 type: array
+                default: null
           description: ""
         "400":
           description: Invalid Request
@@ -3230,6 +3251,7 @@ paths:
                 items:
                   $ref: "#/components/schemas/Entry"
                 type: array
+                default: null
           description: ""
         "400":
           description: Invalid Request
@@ -3252,6 +3274,7 @@ paths:
                 items:
                   $ref: "#/components/schemas/Entry"
                 type: array
+                default: null
           description: ""
         "400":
           description: Invalid Request
@@ -3304,6 +3327,7 @@ paths:
                 items:
                   $ref: "#/components/schemas/Entry"
                 type: array
+                default: null
           description: ""
         "400":
           description: Invalid Request
@@ -3376,6 +3400,7 @@ paths:
                 items:
                   $ref: "#/components/schemas/AppLink"
                 type: array
+                default: null
           description: ""
         "400":
           description: Invalid Request
@@ -3419,6 +3444,7 @@ paths:
                 items:
                   $ref: "#/components/schemas/Entry"
                 type: array
+                default: null
           description: ""
         "400":
           description: Invalid Request
@@ -3558,6 +3584,7 @@ paths:
                 items:
                   $ref: "#/components/schemas/ApiToken"
                 type: array
+                default: null
           description: ""
         "400":
           description: Invalid Request
@@ -3695,6 +3722,7 @@ paths:
                   type: string
                 nullable: true
                 type: array
+                default: null
           description: ""
         "400":
           description: Invalid Request
@@ -3730,6 +3758,7 @@ paths:
               items:
                 type: string
               type: array
+              default: null
         required: true
       responses:
         "200":
@@ -3770,6 +3799,7 @@ paths:
               items:
                 type: string
               type: array
+              default: null
         required: true
       responses:
         "200":
@@ -3885,6 +3915,7 @@ paths:
                 items:
                   type: string
                 type: array
+                default: null
           description: ""
         "400":
           description: Invalid Request
@@ -3912,6 +3943,7 @@ paths:
             schema:
               items: {}
               type: array
+              default: null
         required: true
       responses:
         "200":
@@ -4045,6 +4077,7 @@ paths:
                 items:
                   $ref: "#/components/schemas/Entry"
                 type: array
+                default: null
           description: ""
         "400":
           description: Invalid Request
@@ -4170,6 +4203,7 @@ paths:
                   type: string
                 nullable: true
                 type: array
+                default: null
           description: ""
         "400":
           description: Invalid Request
@@ -4205,6 +4239,7 @@ paths:
               items:
                 type: string
               type: array
+              default: null
         required: true
       responses:
         "200":
@@ -4343,6 +4378,7 @@ paths:
                 items:
                   $ref: "#/components/schemas/Entry"
                 type: array
+                default: null
           description: ""
         "400":
           description: Invalid Request
@@ -4373,6 +4409,7 @@ paths:
                 type: string
               nullable: true
               type: array
+              default: null
       responses:
         "200":
           content:
@@ -4407,6 +4444,7 @@ paths:
                   type: string
                 nullable: true
                 type: array
+                default: null
           description: ""
         "400":
           description: Invalid Request
@@ -4435,6 +4473,7 @@ paths:
               items:
                 type: string
               type: array
+              default: null
         required: true
       responses:
         "200":
@@ -4468,6 +4507,7 @@ paths:
               items:
                 type: string
               type: array
+              default: null
         required: true
       responses:
         "200":
@@ -4490,8 +4530,8 @@ components:
       additionalProperties: false
       description: Request addition of unix attributes to an account
       example:
-        shell: shell
         gidnumber: 0
+        shell: shell
       properties:
         gidnumber:
           format: int32
@@ -4507,10 +4547,10 @@ components:
       example:
         account_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         token_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        purpose: readonly
         label: label
         expiry: 2000-01-23T04:56:07.000+00:00
         issued_at: 2000-01-23T04:56:07.000+00:00
+        purpose: readonly
       properties:
         account_id:
           format: uuid
@@ -4537,10 +4577,10 @@ components:
     ApiTokenGenerate:
       description: A request to generate a new API token for a service account
       example:
-        read_write: true
-        compact: true
         label: label
         expiry: 2000-01-23T04:56:07.000+00:00
+        read_write: true
+        compact: true
       properties:
         label:
           type: string
@@ -4567,10 +4607,10 @@ components:
         used in the UI to render applications on the dashboard for a user to access.
       example:
         Oauth2:
-          has_image: true
           name: name
           display_name: display_name
           redirect_url: https://openapi-generator.tech
+          has_image: true
       properties:
         Oauth2:
           $ref: "#/components/schemas/AppLink_Oauth2"
@@ -5261,6 +5301,7 @@ components:
           items:
             type: string
           type: array
+          default: null
       required:
       - backup_codes
     Base64UrlSafeData:
@@ -5299,8 +5340,8 @@ components:
           type: string
     CUIntentToken:
       example:
-        expiry_time: 2000-01-23T04:56:07.000+00:00
         token: token
+        expiry_time: 2000-01-23T04:56:07.000+00:00
       properties:
         token:
           type: string
@@ -5347,36 +5388,36 @@ components:
       - token
     CUStatus:
       example:
-        passkeys:
-        - tag: tag
-          uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        - tag: tag
-          uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        spn: spn
+        displayname: displayname
+        ext_cred_portal: None
+        mfaregstate: None
         can_commit: true
         warnings:
         - MfaRequired
         - MfaRequired
+        primary: ""
+        primary_state: Modifiable
+        passkeys:
+        - uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          tag: tag
+        - uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          tag: tag
+        passkeys_state: null
+        attested_passkeys:
+        - uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          tag: tag
+        - uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          tag: tag
+        attested_passkeys_state: null
         attested_passkeys_allowed_devices:
         - attested_passkeys_allowed_devices
         - attested_passkeys_allowed_devices
+        unixcred: ""
+        unixcred_state: null
         sshkeys:
           key: ""
         sshkeys_state: null
-        unixcred_state: null
-        spn: spn
-        ext_cred_portal: None
-        attested_passkeys:
-        - tag: tag
-          uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        - tag: tag
-          uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        attested_passkeys_state: null
-        displayname: displayname
-        primary_state: Modifiable
-        unixcred: ""
-        passkeys_state: null
-        mfaregstate: None
-        primary: ""
       properties:
         spn:
           type: string
@@ -5392,6 +5433,7 @@ components:
           items:
             $ref: "#/components/schemas/CURegWarning"
           type: array
+          default: null
         primary:
           allOf:
           - $ref: "#/components/schemas/CredentialDetail"
@@ -5402,18 +5444,21 @@ components:
           items:
             $ref: "#/components/schemas/PasskeyDetail"
           type: array
+          default: null
         passkeys_state:
           $ref: "#/components/schemas/CUCredState"
         attested_passkeys:
           items:
             $ref: "#/components/schemas/PasskeyDetail"
           type: array
+          default: null
         attested_passkeys_state:
           $ref: "#/components/schemas/CUCredState"
         attested_passkeys_allowed_devices:
           items:
             type: string
           type: array
+          default: null
         unixcred:
           allOf:
           - $ref: "#/components/schemas/CredentialDetail"
@@ -5421,7 +5466,8 @@ components:
         unixcred_state:
           $ref: "#/components/schemas/CUCredState"
         sshkeys:
-          additionalProperties: {}
+          additionalProperties:
+            nullable: true
         sshkeys_state:
           $ref: "#/components/schemas/CUCredState"
       required:
@@ -5493,6 +5539,7 @@ components:
           items:
             $ref: "#/components/schemas/Entry"
           type: array
+          default: null
       required:
       - entries
     CreationChallengeResponse:
@@ -5523,6 +5570,7 @@ components:
           items:
             $ref: "#/components/schemas/CredentialDetail"
           type: array
+          default: null
       required:
       - creds
     DeleteRequest:
@@ -5548,6 +5596,8 @@ components:
           additionalProperties:
             items:
               type: string
+            type: array
+            default: null
       required:
       - attrs
     Filter:
@@ -5654,6 +5704,7 @@ components:
           items:
             $ref: "#/components/schemas/Modify"
           type: array
+          default: null
       required:
       - mods
     ModifyRequest:
@@ -6375,8 +6426,8 @@ components:
         type: string
     PasskeyDetail:
       example:
-        tag: tag
         uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        tag: tag
       properties:
         uuid:
           format: uuid
@@ -6490,6 +6541,8 @@ components:
           additionalProperties:
             items:
               type: string
+            type: array
+            default: null
       required:
       - attrs
     PublicKeyCredential:
@@ -6498,15 +6551,15 @@ components:
       type: string
     RadiusAuthToken:
       example:
-        displayname: displayname
         name: name
+        displayname: displayname
+        uuid: uuid
+        secret: secret
         groups:
         - spn: spn
           uuid: uuid
         - spn: spn
           uuid: uuid
-        secret: secret
-        uuid: uuid
       properties:
         name:
           type: string
@@ -6520,6 +6573,7 @@ components:
           items:
             $ref: "#/components/schemas/Group"
           type: array
+          default: null
       required:
       - displayname
       - groups
@@ -6559,9 +6613,9 @@ components:
         for JWK
     ScimApplicationPassword:
       example:
+        uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         label: label
         secret: secret
-        uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
         uuid:
           format: uuid
@@ -6605,17 +6659,18 @@ components:
       additionalProperties:
         $ref: "#/components/schemas/ScimValue"
       example:
-        meta: ""
         schemas:
         - schemas
         - schemas
-        externalId: externalId
         id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        externalId: externalId
+        meta: ""
       properties:
         schemas:
           items:
             type: string
           type: array
+          default: null
         id:
           format: uuid
           type: string
@@ -6637,6 +6692,7 @@ components:
             $ref: "#/components/schemas/Attribute"
           nullable: true
           type: array
+          default: null
         extAccessCheck:
           type: boolean
         sortBy:
@@ -6680,43 +6736,44 @@ components:
         required:
         - id
       example:
-        filter: ""
-        startIndex: 0
-        sortOrder: ""
-        extAccessCheck: true
-        count: 0
         attributes:
         - account
         - account
+        extAccessCheck: true
         sortBy: ""
+        sortOrder: ""
+        startIndex: 0
+        count: 0
+        filter: ""
         id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
     ScimListResponse:
       additionalProperties: false
       example:
-        totalResults: 0
-        startIndex: 0
-        itemsPerPage: 0
         schemas:
         - schemas
         - schemas
+        totalResults: 0
+        itemsPerPage: 0
+        startIndex: 0
         resources:
-        - meta: ""
-          schemas:
+        - schemas:
           - schemas
           - schemas
-          externalId: externalId
           id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        - meta: ""
-          schemas:
-          - schemas
-          - schemas
           externalId: externalId
+          meta: ""
+        - schemas:
+          - schemas
+          - schemas
           id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          externalId: externalId
+          meta: ""
       properties:
         schemas:
           items:
             type: string
           type: array
+          default: null
         totalResults:
           format: int64
           minimum: 0
@@ -6733,6 +6790,7 @@ components:
           items:
             $ref: "#/components/schemas/ScimEntry"
           type: array
+          default: null
       required:
       - resources
       - schemas
@@ -6767,21 +6825,21 @@ components:
     ScimSyncRequest:
       example:
         from_state: Refresh
-        entries:
-        - meta: ""
-          schemas:
-          - schemas
-          - schemas
-          externalId: externalId
-          id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        - meta: ""
-          schemas:
-          - schemas
-          - schemas
-          externalId: externalId
-          id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        retain: Ignore
         to_state: null
+        entries:
+        - schemas:
+          - schemas
+          - schemas
+          id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          externalId: externalId
+          meta: ""
+        - schemas:
+          - schemas
+          - schemas
+          id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          externalId: externalId
+          meta: ""
+        retain: Ignore
       properties:
         from_state:
           $ref: "#/components/schemas/ScimSyncState"
@@ -6791,6 +6849,7 @@ components:
           items:
             $ref: "#/components/schemas/ScimEntry"
           type: array
+          default: null
         retain:
           $ref: "#/components/schemas/ScimSyncRetentionMode"
       required:
@@ -6821,9 +6880,11 @@ components:
       - items:
           $ref: "#/components/schemas/ScimAttr"
         type: array
+        default: null
       - items:
           $ref: "#/components/schemas/BTreeMap"
         type: array
+        default: null
     SearchRequest:
       example:
         filter:
@@ -6851,6 +6912,7 @@ components:
           items:
             $ref: "#/components/schemas/Entry"
           type: array
+          default: null
       required:
       - entries
     SingleStringRequest:
@@ -6892,6 +6954,7 @@ components:
             minimum: 0
             type: integer
           type: array
+          default: null
         algo:
           $ref: "#/components/schemas/TotpAlgo"
         step:
@@ -6966,10 +7029,10 @@ components:
     UnixGroupToken:
       description: A token representing the details of a unix group
       example:
-        spn: spn
-        gidnumber: 0
         name: name
+        spn: spn
         uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        gidnumber: 0
       properties:
         name:
           type: string
@@ -6990,25 +7053,25 @@ components:
     UnixUserToken:
       description: A token representing the details of a unix user
       example:
+        name: name
         spn: spn
-        valid: true
-        shell: shell
         displayname: displayname
         gidnumber: 0
-        name: name
+        uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        shell: shell
         groups:
-        - spn: spn
-          gidnumber: 0
-          name: name
+        - name: name
+          spn: spn
           uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        - spn: spn
           gidnumber: 0
-          name: name
+        - name: name
+          spn: spn
           uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          gidnumber: 0
         sshkeys:
         - sshkeys
         - sshkeys
-        uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        valid: true
       properties:
         name:
           type: string
@@ -7030,10 +7093,12 @@ components:
           items:
             $ref: "#/components/schemas/UnixGroupToken"
           type: array
+          default: null
         sshkeys:
           items:
             type: string
           type: array
+          default: null
         valid:
           type: boolean
       required:
@@ -7055,19 +7120,19 @@ components:
         point onward! This means on updates, that sessions will invalidate in many
         cases.
       example:
-        spn: spn
-        purpose: readonly
-        displayname: displayname
         session_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        expiry: 2000-01-23T04:56:07.000+00:00
-        limit_search_max_results: 0
-        limit_search_max_filter_test: 0
-        mail_primary: mail_primary
         issued_at: 2000-01-23T04:56:07.000+00:00
+        expiry: 2000-01-23T04:56:07.000+00:00
+        purpose: readonly
         uuid: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        displayname: displayname
+        spn: spn
+        mail_primary: mail_primary
         ui_hints:
         - experimentalfeatures
         - experimentalfeatures
+        limit_search_max_results: 0
+        limit_search_max_filter_test: 0
       properties:
         session_id:
           format: uuid
@@ -7099,6 +7164,7 @@ components:
             $ref: "#/components/schemas/UiHint"
           type: array
           uniqueItems: true
+          default: null
         limit_search_max_results:
           format: int64
           minimum: 0
@@ -7140,10 +7206,10 @@ components:
       - youare
     AppLink_Oauth2:
       example:
-        has_image: true
         name: name
         display_name: display_name
         redirect_url: https://openapi-generator.tech
+        has_image: true
       properties:
         name:
           type: string
@@ -7168,13 +7234,15 @@ components:
     AuthAllowed_oneOf:
       properties:
         securitykey:
-          additionalProperties: {}
+          additionalProperties:
+            nullable: true
       required:
       - securitykey
     AuthAllowed_oneOf_1:
       properties:
         passkey:
-          additionalProperties: {}
+          additionalProperties:
+            nullable: true
       required:
       - passkey
     AuthCredential_oneOf:
@@ -7215,6 +7283,7 @@ components:
           items:
             $ref: "#/components/schemas/AuthMech"
           type: array
+          default: null
       required:
       - choose
     AuthState_oneOf_1:
@@ -7225,6 +7294,7 @@ components:
           items:
             $ref: "#/components/schemas/AuthAllowed"
           type: array
+          default: null
       required:
       - continue
     AuthState_oneOf_2:
@@ -7335,18 +7405,21 @@ components:
           items:
             type: string
           type: array
+          default: null
       required:
       - BackupCodes
     CURegState_oneOf_3:
       properties:
         Passkey:
-          additionalProperties: {}
+          additionalProperties:
+            nullable: true
       required:
       - Passkey
     CURegState_oneOf_4:
       properties:
         AttestedPasskey:
-          additionalProperties: {}
+          additionalProperties:
+            nullable: true
       required:
       - AttestedPasskey
     ConsistencyError_oneOf:
@@ -7357,6 +7430,7 @@ components:
           maxItems: 2
           minItems: 2
           type: array
+          default: null
       required:
       - schemaclassmissingattribute
     ConsistencyError_oneOf_1:
@@ -7367,6 +7441,7 @@ components:
           maxItems: 2
           minItems: 2
           type: array
+          default: null
       required:
       - schemaclassphantomattribute
     ConsistencyError_oneOf_2:
@@ -7497,6 +7572,7 @@ components:
           items:
             type: string
           type: array
+          default: null
       required:
       - Passkey
     CredentialDetailType_oneOf_1:
@@ -7509,6 +7585,7 @@ components:
           maxItems: 3
           minItems: 3
           type: array
+          default: null
       required:
       - PasswordMfa
     Filter_oneOf:
@@ -7523,6 +7600,7 @@ components:
           maxItems: 2
           minItems: 2
           type: array
+          default: null
       required:
       - eq
     Filter_oneOf_1:
@@ -7533,6 +7611,7 @@ components:
           maxItems: 2
           minItems: 2
           type: array
+          default: null
       required:
       - cnt
     Filter_oneOf_2:
@@ -7547,6 +7626,7 @@ components:
           items:
             $ref: "#/components/schemas/Filter"
           type: array
+          default: null
       required:
       - or
     Filter_oneOf_4:
@@ -7555,6 +7635,7 @@ components:
           items:
             $ref: "#/components/schemas/Filter"
           type: array
+          default: null
       required:
       - and
     Filter_oneOf_5:
@@ -7608,6 +7689,7 @@ components:
           maxItems: 2
           minItems: 2
           type: array
+          default: null
       required:
       - present
     Modify_oneOf_1:
@@ -7618,6 +7700,7 @@ components:
           maxItems: 2
           minItems: 2
           type: array
+          default: null
       required:
       - removed
     Modify_oneOf_2:
@@ -7646,6 +7729,7 @@ components:
           items:
             $ref: "#/components/schemas/ConsistencyError"
           type: array
+          default: null
       required:
       - consistencyerror
     OperationError_oneOf_3:
@@ -7708,6 +7792,7 @@ components:
           items:
             $ref: "#/components/schemas/Attribute"
           type: array
+          default: null
       required:
       - attributeuniqueness
     OperationError_oneOf_13:
@@ -7722,6 +7807,7 @@ components:
           items:
             $ref: "#/components/schemas/PasswordFeedback"
           type: array
+          default: null
       required:
       - passwordquality
     OperationError_oneOf_15:
@@ -7763,6 +7849,7 @@ components:
           items:
             type: string
           type: array
+          default: null
       required:
       - invalidclass
     SchemaError_oneOf_1:
@@ -7771,6 +7858,7 @@ components:
           items:
             $ref: "#/components/schemas/Attribute"
           type: array
+          default: null
       required:
       - missingmustattribute
     SchemaError_oneOf_2:
@@ -7791,6 +7879,7 @@ components:
           items:
             type: string
           type: array
+          default: null
       required:
       - supplementsnotsatisfied
     SchemaError_oneOf_5:
@@ -7799,6 +7888,7 @@ components:
           items:
             type: string
           type: array
+          default: null
       required:
       - excludesnotsatisfied
     SchemaError_oneOf_6:
@@ -7820,6 +7910,7 @@ components:
             format: uuid
             type: string
           type: array
+          default: null
       required:
       - Retain
     ScimSyncRetentionMode_oneOf_1:
@@ -7835,6 +7926,7 @@ components:
             format: uuid
             type: string
           type: array
+          default: null
       required:
       - Delete
     ScimSyncState_oneOf_Active:
@@ -7845,6 +7937,7 @@ components:
             minimum: 0
             type: integer
           type: array
+          default: null
       required:
       - cookie
     ScimSyncState_oneOf:

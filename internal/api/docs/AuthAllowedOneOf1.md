@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 
 ### NewAuthAllowedOneOf1
 
-`func NewAuthAllowedOneOf1(passkey map[string]interface{}, ) *AuthAllowedOneOf1`
+`func NewAuthAllowedOneOf1(passkey map[string]*interface{}, ) *AuthAllowedOneOf1`
 
 NewAuthAllowedOneOf1 instantiates a new AuthAllowedOneOf1 object
 This constructor will assign default values to properties that have it defined,
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetPasskey
 
-`func (o *AuthAllowedOneOf1) GetPasskey() map[string]interface{}`
+`func (o *AuthAllowedOneOf1) GetPasskey() map[string]*interface{}`
 
 GetPasskey returns the Passkey field if non-nil, zero value otherwise.
 
 ### GetPasskeyOk
 
-`func (o *AuthAllowedOneOf1) GetPasskeyOk() (*map[string]interface{}, bool)`
+`func (o *AuthAllowedOneOf1) GetPasskeyOk() (*map[string]*interface{}, bool)`
 
 GetPasskeyOk returns a tuple with the Passkey field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPasskey
 
-`func (o *AuthAllowedOneOf1) SetPasskey(v map[string]interface{})`
+`func (o *AuthAllowedOneOf1) SetPasskey(v map[string]*interface{})`
 
 SetPasskey sets Passkey field to given value.
 

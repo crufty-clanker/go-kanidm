@@ -9,4 +9,4 @@ package kanidm
 //	if err := client.CheckSchemaVersion(ctx); err != nil {
 //	    log.Warn("schema drift detected", "err", err)
 //	}
-const SchemaVersion = "0.0.0-placeholder"
+const SchemaVersion = "1.10.5"

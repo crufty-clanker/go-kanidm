@@ -26,7 +26,7 @@ Name | Type | Description | Notes
 
 ### NewCUStatus
 
-`func NewCUStatus(spn string, displayname string, extCredPortal CUExtPortal, mfaregstate CURegState, canCommit bool, warnings []CURegWarning, primaryState CUCredState, passkeys []PasskeyDetail, passkeysState CUCredState, attestedPasskeys []PasskeyDetail, attestedPasskeysState CUCredState, attestedPasskeysAllowedDevices []string, unixcredState CUCredState, sshkeys map[string]interface{}, sshkeysState CUCredState, ) *CUStatus`
+`func NewCUStatus(spn string, displayname string, extCredPortal CUExtPortal, mfaregstate CURegState, canCommit bool, warnings []CURegWarning, primaryState CUCredState, passkeys []PasskeyDetail, passkeysState CUCredState, attestedPasskeys []PasskeyDetail, attestedPasskeysState CUCredState, attestedPasskeysAllowedDevices []string, unixcredState CUCredState, sshkeys map[string]*interface{}, sshkeysState CUCredState, ) *CUStatus`
 
 NewCUStatus instantiates a new CUStatus object
 This constructor will assign default values to properties that have it defined,
@@ -373,20 +373,20 @@ SetUnixcredState sets UnixcredState field to given value.
 
 ### GetSshkeys
 
-`func (o *CUStatus) GetSshkeys() map[string]interface{}`
+`func (o *CUStatus) GetSshkeys() map[string]*interface{}`
 
 GetSshkeys returns the Sshkeys field if non-nil, zero value otherwise.
 
 ### GetSshkeysOk
 
-`func (o *CUStatus) GetSshkeysOk() (*map[string]interface{}, bool)`
+`func (o *CUStatus) GetSshkeysOk() (*map[string]*interface{}, bool)`
 
 GetSshkeysOk returns a tuple with the Sshkeys field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSshkeys
 
-`func (o *CUStatus) SetSshkeys(v map[string]interface{})`
+`func (o *CUStatus) SetSshkeys(v map[string]*interface{})`
 
 SetSshkeys sets Sshkeys field to given value.
 
