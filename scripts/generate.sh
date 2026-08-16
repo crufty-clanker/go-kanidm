@@ -32,5 +32,19 @@ openapi-generator-cli generate \
 # Remove generated module files — the root go.mod owns all dependencies.
 rm -f "${OUT_DIR}/go.mod" "${OUT_DIR}/go.sum"
 
+# ── Fix enum constant name collisions ──────────────────────────────────
+# The Go OpenAPI generator names enum constants from the raw values
+# (e.g. "readonly" → READONLY). When two models share values the
+# constant names collide.  Detect collisions and prefix the constants
+# with the first 3 chars of the struct name (PascalCase).
+#
+# Example:  ApiTokenPurpose  → prefix "ATP"  (Api Token Purpose)
+#           UatPurposeStatus → prefix "UPS" (Uat Purpose Status)
+#
+# Only constants whose names already exist in another model file are
+# renamed; unique constants are left untouched.
+
+bash scripts/fix_enum_collision.sh "${OUT_DIR}"
+
 echo "==> Generation complete."
 echo "    Run: go build ./... to verify."
