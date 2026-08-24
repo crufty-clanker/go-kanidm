@@ -158,6 +158,7 @@ docs/OperationErrorOneOf9.md
 docs/PasskeyDetail.md
 docs/PasswordFeedback.md
 docs/PasswordFeedbackOneOf.md
+docs/PasswordFeedbackOneOf1.md
 docs/PersonAPI.md
 docs/PersonAttrAPI.md
 docs/PersonCertificateAPI.md
@@ -347,6 +348,7 @@ model_operation_error_one_of_9.go
 model_passkey_detail.go
 model_password_feedback.go
 model_password_feedback_one_of.go
+model_password_feedback_one_of_1.go
 model_plugin_error.go
 model_plugin_error_one_of.go
 model_plugin_error_one_of_1.go
