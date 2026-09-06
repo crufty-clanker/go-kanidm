@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **Mfaregstate** | [**CURegState**](CURegState.md) |  | 
 **CanCommit** | **bool** |  | 
 **Warnings** | [**[]CURegWarning**](CURegWarning.md) |  | 
+**Dirty** | **bool** |  | 
 **Primary** | Pointer to [**NullableCredentialDetail**](CredentialDetail.md) |  | [optional] 
 **PrimaryState** | [**CUCredState**](CUCredState.md) |  | 
 **Passkeys** | [**[]PasskeyDetail**](PasskeyDetail.md) |  | 
@@ -26,7 +27,7 @@ Name | Type | Description | Notes
 
 ### NewCUStatus
 
-`func NewCUStatus(spn string, displayname string, extCredPortal CUExtPortal, mfaregstate CURegState, canCommit bool, warnings []CURegWarning, primaryState CUCredState, passkeys []PasskeyDetail, passkeysState CUCredState, attestedPasskeys []PasskeyDetail, attestedPasskeysState CUCredState, attestedPasskeysAllowedDevices []string, unixcredState CUCredState, sshkeys map[string]*interface{}, sshkeysState CUCredState, ) *CUStatus`
+`func NewCUStatus(spn string, displayname string, extCredPortal CUExtPortal, mfaregstate CURegState, canCommit bool, warnings []CURegWarning, dirty bool, primaryState CUCredState, passkeys []PasskeyDetail, passkeysState CUCredState, attestedPasskeys []PasskeyDetail, attestedPasskeysState CUCredState, attestedPasskeysAllowedDevices []string, unixcredState CUCredState, sshkeys map[string]*interface{}, sshkeysState CUCredState, ) *CUStatus`
 
 NewCUStatus instantiates a new CUStatus object
 This constructor will assign default values to properties that have it defined,
@@ -159,6 +160,26 @@ and a boolean to check if the value has been set.
 `func (o *CUStatus) SetWarnings(v []CURegWarning)`
 
 SetWarnings sets Warnings field to given value.
+
+
+### GetDirty
+
+`func (o *CUStatus) GetDirty() bool`
+
+GetDirty returns the Dirty field if non-nil, zero value otherwise.
+
+### GetDirtyOk
+
+`func (o *CUStatus) GetDirtyOk() (*bool, bool)`
+
+GetDirtyOk returns a tuple with the Dirty field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDirty
+
+`func (o *CUStatus) SetDirty(v bool)`
+
+SetDirty sets Dirty field to given value.
 
 
 ### GetPrimary

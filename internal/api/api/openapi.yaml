@@ -7,7 +7,7 @@ info:
   license:
     name: MPL-2.0
   title: Kanidm
-  version: 1.10.5
+  version: 1.11.1
 externalDocs:
   description: Kanidm documentation page
   url: https://kanidm.com/docs
@@ -5017,6 +5017,9 @@ components:
         - oauth2tokenendpoint
         type: string
       - enum:
+        - oauth2tokenintrospectendpoint
+        type: string
+      - enum:
         - oauth2accountcredentialuuid
         type: string
       - enum:
@@ -5024,6 +5027,9 @@ components:
         type: string
       - enum:
         - oauth2accountuniqueuserid
+        type: string
+      - enum:
+        - oauth2accountuniqueusersub
         type: string
       - enum:
         - oauth2consentpromptenable
@@ -5396,6 +5402,7 @@ components:
         warnings:
         - MfaRequired
         - MfaRequired
+        dirty: true
         primary: ""
         primary_state: Modifiable
         passkeys:
@@ -5434,6 +5441,8 @@ components:
             $ref: "#/components/schemas/CURegWarning"
           type: array
           default: null
+        dirty:
+          type: boolean
         primary:
           allOf:
           - $ref: "#/components/schemas/CredentialDetail"
@@ -5475,6 +5484,7 @@ components:
       - attested_passkeys_allowed_devices
       - attested_passkeys_state
       - can_commit
+      - dirty
       - displayname
       - ext_cred_portal
       - mfaregstate
@@ -6521,6 +6531,7 @@ components:
         - commonnamesandsurnamesareeasytoguess
         type: string
       - $ref: "#/components/schemas/PasswordFeedback_oneOf"
+      - $ref: "#/components/schemas/PasswordFeedback_oneOf_1"
       - enum:
         - badlisted
         type: string
@@ -7825,6 +7836,14 @@ components:
           type: integer
       required:
       - tooshort
+    PasswordFeedback_oneOf_1:
+      properties:
+        toolong:
+          format: int32
+          minimum: 0
+          type: integer
+      required:
+      - toolong
     PluginError_oneOf:
       properties:
         base:
