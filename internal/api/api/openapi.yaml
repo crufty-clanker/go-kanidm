@@ -7,7 +7,7 @@ info:
   license:
     name: MPL-2.0
   title: Kanidm
-  version: 1.11.1
+  version: 1.12.1
 externalDocs:
   description: Kanidm documentation page
   url: https://kanidm.com/docs
@@ -295,6 +295,26 @@ paths:
       - token_jwt: []
       tags:
       - scim
+  /scim/v1/Feature:
+    get:
+      operationId: scim_feature_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ScimListResponse"
+          description: ""
+        "400":
+          description: Invalid Request
+        "401":
+          description: Authorization required
+        "403":
+          description: Not Authorized
+      security:
+      - token_jwt: []
+      tags:
+      - scim
   /scim/v1/Message:
     get:
       operationId: scim_message_get
@@ -352,6 +372,33 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ScimEntry"
+          description: ""
+        "400":
+          description: Invalid Request
+        "401":
+          description: Authorization required
+        "403":
+          description: Not Authorized
+      security:
+      - token_jwt: []
+      tags:
+      - scim
+  /scim/v1/Message/{id}/_resend:
+    delete:
+      operationId: scim_message_id_resend_post
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: uuid
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json: {}
           description: ""
         "400":
           description: Invalid Request
@@ -5967,6 +6014,24 @@ components:
         - kg006datastructurecorruption
         type: string
       - enum:
+        - as0001featuredisabled
+        type: string
+      - enum:
+        - as0002featuredisabled
+        type: string
+      - enum:
+        - as0003featuredisabled
+        type: string
+      - enum:
+        - as0004invalidstate
+        type: string
+      - enum:
+        - as0005invalidstate
+        type: string
+      - enum:
+        - as0006invalidstate
+        type: string
+      - enum:
         - cu0001webauthnattestationnottrusted
         type: string
       - enum:
@@ -6127,6 +6192,9 @@ components:
         type: string
       - enum:
         - sc0033assertioncontainsduplicateuuids
+        type: string
+      - enum:
+        - sc0034uuidsyntaxinvalid
         type: string
       - enum:
         - mg0001invalidremigrationlevel
@@ -6402,6 +6470,30 @@ components:
         - kp0080keyprovidernosuchkey
         type: string
       - enum:
+        - kp0081keyobjectimportjwea256gcminvalid
+        type: string
+      - enum:
+        - kp0082keyobjectimportjwea256gcminvalid
+        type: string
+      - enum:
+        - kp0083keyobjectjwenotassociated
+        type: string
+      - enum:
+        - kp0084keyobjectjweinvalid
+        type: string
+      - enum:
+        - kp0085keyobjectjwerevoked
+        type: string
+      - enum:
+        - kp0086keyobjectnoactiveencryptionkeys
+        type: string
+      - enum:
+        - kp0087keyobjectjwea256gcmencryption
+        type: string
+      - enum:
+        - kp0088keyprovidernosuchkey
+        type: string
+      - enum:
         - pl0001gidoverlapssystemrange
         type: string
       - enum:
@@ -6415,6 +6507,27 @@ components:
         type: string
       - enum:
         - ui0004memberalreadyexists
+        type: string
+      - enum:
+        - ui0005personalreadyexists
+        type: string
+      - enum:
+        - ui0006missingdisplayname
+        type: string
+      - enum:
+        - ui0007duplicateemail
+        type: string
+      - enum:
+        - ui0008invalidusername
+        type: string
+      - enum:
+        - ui0009groupalreadyexists
+        type: string
+      - enum:
+        - ui0010missinggroupname
+        type: string
+      - enum:
+        - ui0011invalidgroupname
         type: string
       - enum:
         - ku001initwhilesessionactive
