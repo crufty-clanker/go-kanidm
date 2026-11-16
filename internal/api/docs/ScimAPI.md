@@ -13,8 +13,10 @@ Method | HTTP request | Description
 [**ScimEntryIdGet**](ScimAPI.md#ScimEntryIdGet) | **Get** /scim/v1/Entry/{id} | 
 [**ScimEntryPost**](ScimAPI.md#ScimEntryPost) | **Post** /scim/v1/Entry | 
 [**ScimEntryPut**](ScimAPI.md#ScimEntryPut) | **Put** /scim/v1/Entry | 
+[**ScimFeatureGet**](ScimAPI.md#ScimFeatureGet) | **Get** /scim/v1/Feature | 
 [**ScimMessageGet**](ScimAPI.md#ScimMessageGet) | **Get** /scim/v1/Message | 
 [**ScimMessageIdGet**](ScimAPI.md#ScimMessageIdGet) | **Get** /scim/v1/Message/{id} | 
+[**ScimMessageIdResendPost**](ScimAPI.md#ScimMessageIdResendPost) | **Delete** /scim/v1/Message/{id}/_resend | 
 [**ScimMessageIdSentPost**](ScimAPI.md#ScimMessageIdSentPost) | **Delete** /scim/v1/Message/{id}/_sent | 
 [**ScimMessageReadyGet**](ScimAPI.md#ScimMessageReadyGet) | **Get** /scim/v1/Message/_ready | 
 [**ScimPersonIdApplicationCreatePassword**](ScimAPI.md#ScimPersonIdApplicationCreatePassword) | **Post** /scim/v1/Person/{id}/Application/_create_password | 
@@ -608,6 +610,65 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## ScimFeatureGet
+
+> ScimListResponse ScimFeatureGet(ctx).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/slop-incubator/go-kanidm/internal/api"
+)
+
+func main() {
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.ScimAPI.ScimFeatureGet(context.Background()).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `ScimAPI.ScimFeatureGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ScimFeatureGet`: ScimListResponse
+	fmt.Fprintf(os.Stdout, "Response from `ScimAPI.ScimFeatureGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+This endpoint does not need any parameter.
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiScimFeatureGetRequest struct via the builder pattern
+
+
+### Return type
+
+[**ScimListResponse**](ScimListResponse.md)
+
+### Authorization
+
+[token_jwt](../README.md#token_jwt)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## ScimMessageGet
 
 > ScimListResponse ScimMessageGet(ctx).Execute()
@@ -720,6 +781,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ScimEntry**](ScimEntry.md)
+
+### Authorization
+
+[token_jwt](../README.md#token_jwt)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ScimMessageIdResendPost
+
+> ScimMessageIdResendPost(ctx, id).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/slop-incubator/go-kanidm/internal/api"
+)
+
+func main() {
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.ScimAPI.ScimMessageIdResendPost(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `ScimAPI.ScimMessageIdResendPost``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** |  | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiScimMessageIdResendPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+ (empty response body)
 
 ### Authorization
 
